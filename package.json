@@ -1,0 +1,24 @@
+{
+    "name": "swap-subgraph",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "ts-node src/event-listener.ts",
+        "build": "tsc",
+        "codegen": "graph codegen",
+        "build-graph": "graph build",
+        "deploy": "graph deploy",
+        "create-local": "graph create esync/actswap --node http://127.0.0.1:8020",
+        "deploy-local": "graph deploy esync/actswap --ipfs http://localhost:5001 --node http://127.0.0.1:8020"
+    },
+    "dependencies": {
+        "ethers": "^6.7.0"
+    },
+    "devDependencies": {
+        "@types/node": "^18.15.0",
+        "@graphprotocol/graph-cli": "^0.95.0",
+        "@graphprotocol/graph-ts": "^0.37.0",
+        "ts-node": "^10.9.0",
+        "typescript": "^4.9.5"
+    },
+    "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}

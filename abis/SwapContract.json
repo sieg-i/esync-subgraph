@@ -1,0 +1,22 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "sender",
+        "type": "address"
+      },
+      {
+        "name": "actAmount",
+        "type": "uint256"
+      },
+      {
+        "name": "ecsAmount",
+        "type": "uint256"
+      }
+    ],
+    "name": "Swapped",
+    "type": "event"
+  }
+]
