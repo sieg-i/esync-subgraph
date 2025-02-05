@@ -6,3 +6,8 @@ type SwapEvent @entity {
   timestamp: BigInt!
   blockNumber: BigInt!
 }
+
+type TotalStats @entity {
+  id: ID!
+  total: BigInt!
+}
