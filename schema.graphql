@@ -1,0 +1,13 @@
+type SwapEvent @entity {
+  id: Bytes!
+  sender: Bytes!
+  actAmount: BigInt!
+  ecsAmount: BigInt!
+  timestamp: BigInt!
+  blockNumber: BigInt!
+}
+
+type TotalStats @entity {
+  id: ID!
+  total: BigInt!
+}

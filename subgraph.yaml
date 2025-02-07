@@ -1,0 +1,24 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: SwapContract
+    network: mainnet
+    source:
+      address: "0xc88254EE5f92fc148d235fD666B4fEd3386b71bd"
+      abi: SwapContract
+      startBlock: 23440000 # Replace with actual start block
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - SwapEvent
+      abis:
+        - name: SwapContract
+          file: ./abis/SwapContract.json
+      eventHandlers:
+        - event: Swapped(indexed address,uint256,uint256)
+          handler: handleSwapped
+      file: ./src/mapping.ts
