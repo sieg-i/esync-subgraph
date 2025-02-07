@@ -2,7 +2,7 @@
     "name": "swap-subgraph",
     "version": "1.0.0",
     "scripts": {
-        "start": "ts-node src/event-listener.ts",
+        "act-swapped-logger": "ts-node src/swapped-event-logger.ts",
         "build": "tsc",
         "codegen": "graph codegen",
         "build-graph": "graph build",
