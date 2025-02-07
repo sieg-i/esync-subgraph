@@ -1,7 +1,11 @@
 # esync-subgraph
-Subgraphs for several smart contracts running on the esync.network blockchain
+Subgraphs for smart contracts running on the esync.network blockchain.
 
 RPC url for esync.network mainnet: https://rpc.esync.network
+
+The repository contains also a `docker-compose.yaml` file to deploy and run the subgraph locally for dev/testing purposes.
+
+See the official graph-node documentation for further information how to run and consume subgraphs: https://github.com/graphprotocol/graph-node/blob/master/docs/getting-started.md
 
 ## ABIs
 
@@ -54,4 +58,30 @@ Event:
 
 ```Solidity
 event Voted(address indexed voter, bytes option);
+```
+
+## Example Queries
+
+### ACT Swapp
+
+#### Querying latest swaps
+```graphql
+query LatestSwapps {
+  swapEvents(orderBy: blockNumber, orderDirection: desc) {
+    sender
+    actAmount
+    blockNumber
+    timestamp
+  }
+}
+```
+
+#### Querying Total Stats (total ACT tokens swapped)
+
+```graphql
+query TotalActSwapped {
+  totalStats(id:"totalActAmountSwapped") {
+    total
+  }
+}
 ```
