@@ -62,7 +62,7 @@ event Voted(address indexed voter, bytes option);
 
 ## Example Queries
 
-### ACT Swapp
+### ACT Swap
 
 #### Querying latest swaps
 ```graphql
@@ -76,7 +76,7 @@ query LatestSwapps {
 }
 ```
 
-#### Querying Total Stats (total ACT tokens swapped)
+#### Querying Total ACT tokens swapped
 
 ```graphql
 query TotalActSwapped {
